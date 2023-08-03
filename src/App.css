@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --lightest-green: #ccff33;
+  --light-green: #9ef01a;
+  --light-mid-green: #70e000;
+  --mid-green: #38b000;
+  --dark-mid-green: #008000;
+  --dark-green: #007200;
+  --darker-green: #006400;
+  --darkest-green: #004b23;
+  --gray: #e5e5e5;
+  --white: #fafaff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+  font-size: 20px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  gap: 20px;
+}
+
+.navbar {
+  background-color: var(--dark-mid-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.navbar h1 {
+  color: var(--white);
+  font-family: "Cantora One", sans-serif;
+  font-size: 60px;
+}
+
+.navbar h1:hover {
+  cursor: default;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+}
+
+.introduction {
+  text-align: center;
+  font-style: italic;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.nav-section {
+  background-color: var(--gray);
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+}
+
+.nav-section div {
+  width: 800px;
+}
+
+.nav-section img {
+  width: 1000px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.home div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home p {
+  color: var(--darkest-green);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.section-title {
+  color: var(--darker-green);
+  font-family: "Cantora One", sans-serif;
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.about ul {
+  margin-top: 10px;
+  margin-left: 20px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.about ul li {
+  margin: 10px 0;
+  color: var(--darkest-green);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.btns {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns button {
+  background-color: var(--mid-green);
+  color: var(--white);
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 20px 20px;
+  border: none;
+}
+
+.btns button:hover {
+  cursor: pointer;
+  background-color: var(--dark-green);
+}
+
+.activities ul li {
+  color: var(--darkest-green);
+  list-style-type: none;
+  text-align: center;
+  margin: 5px 0 5px 0;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.activities p {
+  margin-top: 20px;
+  color: var(--darkest-green);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.services p {
+  margin-top: 15px;
+  color: var(--darkest-green);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.contact-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  height: 650px;
+}
+
+.contact-us h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+  line-height: 60px;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin: 10px 0;
+}
+
+.form-input {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid var(--gray);
+  outline: none;
+}
+
+.form-input:focus {
+  border: 3px solid var(--mid-green);
+}
+
+.form-inline {
+  display: flex;
+  gap: 20px;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-btn {
+  background-color: var(--mid-green);
+  color: var(--white);
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 10px 0;
+  border: none;
+  margin-top: 40px;
+}
+
+.form-btn:hover {
+  cursor: pointer;
+  background-color: var(--dark-green);
+}
+
+.footer {
+  background-color: var(--gray);
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  padding: 50px;
+}
+
+.footer .info {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  justify-content: center;
+  gap: 40px;
+}
