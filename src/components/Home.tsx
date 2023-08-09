@@ -1,7 +1,7 @@
 export function Home() {
   return (
-    <div className="home nav-section">
-      <img src="/images/relaxed.jpg" alt="" className="home-img" />
+    <div className='home nav-section'>
+      <img src='/images/relaxed.jpg' alt='' className='home-img' />
       <div>
         <p>
           Over 400 campsites nestled in refreshing wooded areas, most with full
