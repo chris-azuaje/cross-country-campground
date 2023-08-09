@@ -21,32 +21,32 @@ export function Calendar() {
     adaptor: new WebApiAdaptor(),
     crossDomain: true,
   });
-  function onDataBinding(e: Record<string, any>): void {
-    const items: Record<string, any>[] = e.result as Record<
-      string,
-      Record<string, any>[]
-    >;
-    const schedulerData: Record<string, any>[] = [];
-    if (items.length > 0) {
-      for (const event of items) {
-        const isAllDay: boolean = !event.start.dateTime;
-        let start: string = event.start.dateTime as string;
-        let end: string = event.end.dateTime as string;
-        if (isAllDay) {
-          start = event.start.date as string;
-          end = event.end.date as string;
-        }
-        schedulerData.push({
-          Id: event.id,
-          Subject: event.summary,
-          StartTime: new Date(start),
-          EndTime: new Date(end),
-          IsAllDay: isAllDay,
-        });
-      }
-    }
-    e.result = schedulerData;
-  }
+  // function onDataBinding(e: Record<string, any>): void {
+  //   const items: Record<string, any>[] = e.result as Record<
+  //     string,
+  //     Record<string, any>[]
+  //   >;
+  //   const schedulerData: Record<string, any>[] = [];
+  //   if (items.length > 0) {
+  //     for (const event of items) {
+  //       const isAllDay: boolean = !event.start.dateTime;
+  //       let start: string = event.start.dateTime as string;
+  //       let end: string = event.end.dateTime as string;
+  //       if (isAllDay) {
+  //         start = event.start.date as string;
+  //         end = event.end.date as string;
+  //       }
+  //       schedulerData.push({
+  //         Id: event.id,
+  //         Subject: event.summary,
+  //         StartTime: new Date(start),
+  //         EndTime: new Date(end),
+  //         IsAllDay: isAllDay,
+  //       });
+  //     }
+  //   }
+  //   e.result = schedulerData;
+  // }
   return (
     <div className='modal-window calendar'>
       <div className='exitBtn-container'>
@@ -56,7 +56,7 @@ export function Calendar() {
       <ScheduleComponent
         currentView='Month'
         eventSettings={{ dataSource: remoteData }}
-        dataBinding={onDataBinding}
+        // dataBinding={onDataBinding}
       >
         <Inject services={[Day, Week, WorkWeek, Month, Agenda]}></Inject>
       </ScheduleComponent>

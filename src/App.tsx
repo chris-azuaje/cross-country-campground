@@ -24,16 +24,16 @@ function App() {
       <Divider />
       <About />
       <Divider />
-      {/* <Rules /> */}
-      {/* <Rates /> */}
+      <Rules />
+      <Rates />
       <Activities />
       <Divider />
-      {/* <Calendar /> */}
-      {/* <Gallery /> */}
+      <Calendar />
+      <Gallery />
       <Services />
       <Divider />
       <ContactUs />
-      {/* <Success /> */}
+      <Success />
       <Footer />
     </div>
   );
