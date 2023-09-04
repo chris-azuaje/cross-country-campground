@@ -32,6 +32,38 @@ body {
   background-color: var(--white);
 }
 
+.modal-overlay {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-window {
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 200px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.success p {
+  margin: 0 200px 10px 200px;
+}
+
 .top-section {
   display: flex;
   justify-content: center;
@@ -91,7 +123,7 @@ body {
   font-size: 20px;
   font-weight: 500;
   margin: 5px;
-  padding: 10px 15px;
+  padding: 10px 5px;
   border-radius: 10px;
 }
 
@@ -113,7 +145,6 @@ body {
 }
 
 .nav-section {
-  /* border: 1px solid black; */
   padding: 0px 100px;
   margin: 10px;
   border-radius: 10px;
@@ -170,10 +201,10 @@ body {
 }
 
 .btns {
-  /* width: 100%; */
-  /* margin-top: 40px; */
+  min-width: 100%;
+  margin-top: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .btns button {
@@ -188,21 +219,6 @@ body {
 .btns button:hover {
   cursor: pointer;
   background-color: var(--dark-green);
-}
-
-.modal-window {
-  /* background-color: var(--gray); */
-  background-color: var(--white);
-  /* border: 1px solid var(--gray); */
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 200px;
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 20px;
 }
 
 .exitBtn-container {
@@ -225,6 +241,10 @@ body {
 .exitBtn:hover {
   cursor: pointer;
   border: 3px solid var(--dark-mid-green);
+}
+
+.rules ul {
+  margin-left: 10px;
 }
 
 .rates th {
@@ -260,6 +280,16 @@ td {
   line-height: 30px;
 }
 
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-gallery {
+  width: 70%;
+}
+
 .services p {
   margin-top: 15px;
   color: var(--darkest-green);
@@ -268,11 +298,11 @@ td {
 }
 
 .contact-us {
-  /* border: 1px solid black; */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 480px;
+  margin: 100px 480px;
   padding: 20px;
 }
 
@@ -319,7 +349,7 @@ td {
   color: var(--white);
   font-size: 20px;
   border-radius: 10px;
-  padding: 10px 0;
+  padding: 20px 60px;
   border: none;
   margin-top: 40px;
 }
@@ -363,6 +393,61 @@ td {
     border-radius: 0px;
   }
 
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  .hamburger-icon:hover {
+    cursor: pointer;
+  }
+
+  .bar-1,
+  .bar-2,
+  .bar-3 {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+
+  .bar-2 {
+    margin: 5px 0;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-mid-green);
+    list-style-type: none;
+    margin-left: -90px;
+    margin-top: 55px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .mobile-menu li {
+    margin-bottom: 5px;
+  }
+
+  .mobile-menu li a {
+    text-decoration: none;
+    width: 100%;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .mobile-menu li a:hover {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+  }
+
   .menu {
     display: none;
   }
@@ -386,10 +471,6 @@ td {
 
   .nav-section div {
     width: 80%;
-  }
-
-  .modal-window {
-    margin: 10px 0;
   }
 
   .about {
@@ -426,8 +507,24 @@ td {
 /* ----------------------------------- */
 
 @media screen and (max-width: 520px) {
+  .navbar {
+    flex-direction: column;
+  }
+
   .navbar h1 {
     font-size: 25px;
+  }
+
+  .hamburger-icon {
+    margin-top: 10px;
+  }
+
+  .mobile-menu {
+    margin-top: 40px;
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-section img {

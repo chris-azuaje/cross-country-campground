@@ -1,10 +1,10 @@
 export function Rules() {
   return (
-    <div className="modal-window rules">
-      <div className="exitBtn-container">
-        <button className="exitBtn">X</button>
+    <div className='rules'>
+      <div className='exitBtn-container'>
+        <button className='exitBtn'>X</button>
       </div>
-      <h2 className="section-title">Campground Rules</h2>
+      <h2 className='section-title'>Campground Rules</h2>
       <ul>
         <li>
           Don’t walk through other people’s sites (and make sure your kids

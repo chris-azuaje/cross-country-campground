@@ -1,10 +1,10 @@
 export function Rates() {
   return (
-    <div className="modal-window rates">
-      <div className="exitBtn-container">
-        <button className="exitBtn">X</button>
+    <div className='rates'>
+      <div className='exitBtn-container'>
+        <button className='exitBtn'>X</button>
       </div>
-      <h2 className="section-title">Campground Rates</h2>
+      <h2 className='section-title'>Campground Rates</h2>
       <table>
         <thead>
           <tr>

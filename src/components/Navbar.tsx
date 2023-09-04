@@ -20,9 +20,9 @@ export function Navbar() {
         </li>
       </ul>
       <div className='hamburger-icon'>
-        <div className='bar'></div>
-        <div className='bar'></div>
-        <div className='bar'></div>
+        <div className='bar-1'></div>
+        <div className='bar-2'></div>
+        <div className='bar-3'></div>
         <ul className='mobile-menu'>
           <li>
             <a href='#'>Home</a>

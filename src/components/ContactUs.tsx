@@ -1,4 +1,10 @@
+import Modal from './Modal';
+import useModal from '../hooks/useModal';
+import { Success } from './Success';
+
 export function ContactUs() {
+  const { isSuccessOpen, toggleSuccess } = useModal();
+
   return (
     <div className='contact-us'>
       <form>
@@ -60,9 +66,14 @@ export function ContactUs() {
               rows={4}
             ></textarea>
           </div>
-          <button className='form-btn'>Send Message</button>
         </div>
       </form>
+      <button className='form-btn' onClick={toggleSuccess}>
+        Send Message
+      </button>
+      <Modal isOpen={isSuccessOpen} toggle={toggleSuccess} modalId='success'>
+        <Success />
+      </Modal>
     </div>
   );
 }
