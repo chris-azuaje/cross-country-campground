@@ -90,7 +90,8 @@ body {
 }
 
 .navbar {
-  background-color: var(--dark-mid-green);
+  /* background-color: var(--dark-mid-green); */
+  background: linear-gradient(var(--dark-mid-green), var(--darker-green));
   display: flex;
   justify-content: space-between;
   align-items: center;
